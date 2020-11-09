@@ -1,4 +1,4 @@
-package com.dream.start.spring.source.pojo;
+package com.dream.start.spring.source.annotation.bean.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

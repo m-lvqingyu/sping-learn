@@ -1,6 +1,6 @@
-package com.dream.start.spring.source.config;
+package com.dream.start.spring.source.annotation.bean.config;
 
-import com.dream.start.spring.source.pojo.Person;
+import com.dream.start.spring.source.annotation.bean.pojo.Person;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
