@@ -1,7 +1,9 @@
 package com.dream.start.spring.source.annotation.imports.config;
 
+import com.dream.start.spring.source.annotation.imports.factory.MonkeyFactoryBean;
 import com.dream.start.spring.source.annotation.imports.pojo.Car;
 import com.dream.start.spring.source.annotation.imports.pojo.Person;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
@@ -11,4 +13,9 @@ import org.springframework.context.annotation.Import;
 @Configuration
 @Import(value = {Person.class, Car.class, CustomImportSelector.class, CustomImportBeanDefinitionRegister.class})
 public class MainConfig {
+
+    @Bean
+    public MonkeyFactoryBean monkeyFactoryBean(){
+        return new MonkeyFactoryBean();
+    }
 }
