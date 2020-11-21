@@ -1,0 +1,42 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: users-server
+############################################ eureka注册中心 #####################################
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+############################################ eureka注册中心 #####################################
+############################################ ribbon饥饿加载 #####################################
+ribbon:
+  # 饥饿加载
+  eager-load:
+    # 是否开启饥饿加载
+    enabled: true
+    # 饥饿加载的服务
+    clients: order-server
+############################################ ribbon饥饿加载 #####################################
+############################################ openfeign #####################################
+feign:
+  client:
+    config:
+      order-server: # 微服务名称
+        loggerLevel: full
+        #contract: feign.Contract.Default #指定默认契约
+        httpclient: #让feign底层使用HttpClient去调用
+          enabled: true
+          max‐connections: 200 #最大连接数
+          max‐connections‐per‐route: 50 #为每个url请求设置最大连接数
+      default:
+        connectTimeout: 2000
+        readTimeout: 3000
+############################################ openfeign #####################################
+logging:
+  level:
+    com:
+      spring:
+        learn:
+          order:
+            api: debug
