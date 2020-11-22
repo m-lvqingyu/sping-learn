@@ -20,6 +20,7 @@
         <module>open-feign/users-server</module>
         <module>open-feign/order-server-api</module>
         <module>register-center/server-register-center</module>
+        <module>spring-learn-sources/learn-source-02</module>
     </modules>
     <packaging>pom</packaging>
 
